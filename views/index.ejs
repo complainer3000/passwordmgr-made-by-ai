@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<link rel="stylesheet" href="/styles.css">
+  <title>Password Manager</title>
+</head>
+<body>
+  <nav>
+    <a href="/add-password">Add Password</a> |
+    <a href="/logout">Logout</a>
+  </nav>
+  <h1>Welcome, <%= username %>!</h1>
+  <ul>
+    <% passwords.forEach(password => { %>
+      <li><%= password.key %> - <%= password.value %> - <%= password.notes %></li>
+    <% }) %>
+  </ul>
+</body>
+</html>
